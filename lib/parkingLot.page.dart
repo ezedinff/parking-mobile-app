@@ -38,7 +38,7 @@ class ParkingLotState extends State <ParkingLot> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          appBar: AppBar(title: Text("Profile")),
+          appBar: AppBar(title: Text("Parking Lots")),
           body: ListView.builder(
             itemCount: parkingLots == null ? 0 : parkingLots.length,
             itemBuilder: _buildItem,

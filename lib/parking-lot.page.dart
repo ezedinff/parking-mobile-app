@@ -14,8 +14,8 @@ class ParkingLotPageState extends State<ParkingLotPage> {
   int _currentIndex = 0;
   final List<Widget> _childred = [
     ParkingLot(),
-    ParkingSlot(),
     Timer(),
+    ParkingSlot(),
   ];
   @override
   Widget build(BuildContext context) {
