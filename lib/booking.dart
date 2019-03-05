@@ -48,3 +48,4 @@ class BookingState extends State<Booking> {
   book(hours) {
     this.bookingSerivce.book(this.c, hours);
   }
+}
