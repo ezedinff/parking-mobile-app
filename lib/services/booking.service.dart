@@ -7,15 +7,15 @@ import 'auth.dart';
 import '../flutkart.dart';
 
 class BookingService {
-  String routePath = '/parking-slot-reservations';
+  static String routePath = routePath + '/parking-slot-reservations';
   final auth = new Auth();
-  book(customer_id, hours) {
+  book(customerId, hours) {
     auth.getToken().then((token) async {
       http.Response response = await http.post(
-          Uri.encodeFull(Flutkart.baserUrl + routePath), headers: {
+          Uri.encodeFull(routePath), headers: {
         "Accept": "application/json",
         "x-access-token": token
-      }, body: {"customer_id": customer_id, "duration_in_minutes": hours * 60});
+      }, body: {"customer_id": customerId, "duration_in_minutes": 60});
       return j.json.decode(response.body);
     });
   }

@@ -38,7 +38,7 @@ class ParkingLotMapState extends State<ParkingLotMap> {
         title: Text("Location"),
       ),
       body: GoogleMap(
-        mapType: MapType.normal,
+        mapType: MapType.terrain,
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);

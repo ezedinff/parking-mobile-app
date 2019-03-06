@@ -84,9 +84,17 @@ class CardItem extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Container(
-                  child: Image.asset("assets/car 1.png"),
                   width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: NetworkImage(this.item['cover']),
+                      )
+                  ),
                 ),
+                SizedBox(width: 16),
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 4.0),
                   child: Column(
